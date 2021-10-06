@@ -12,10 +12,10 @@ ABC Products is an E-Commerce single page web application that enables customers
 
 ## 🎯 Objectives
 
-* Learn the MERN Stack: **MongoDB (NoSQL)**, **Express.js**, **React.js**, and **Node.js**.
-* Integrate web applications with a variety of frameworks and APIs.
-* Leverage **GitHub**, **Heroku**, **Netlify**, and **DataStax Astra DB**.
-* Algorithmic development using T-SQL (**MS SQL Server**) and **JavaScript**.
+* Use the MERN Stack: **MongoDB (NoSQL)**, **GraphQL API**, **Express.js**, **React.js**, **Node.js**, and **user authentication with JWT**.
+* Integrate the web application with a variety of frameworks and APIs.
+* Leverage **GitHub** and **Heroku**.
+<!-- * Algorithmic development using T-SQL (**MS SQL Server**) and **JavaScript**. -->
 * Provide Continuous Delivery of projects deployed to production.
 <br/><br/>
 
