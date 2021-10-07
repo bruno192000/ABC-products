@@ -35,7 +35,7 @@ search for products           | see what items are available
 
 ## 🖼️ Wireframe
 <br/>
-<img src="./public/assets/images/abc-products-ecommerce-wireframe.png" height="40%" width="40%" alt="Wireframe for ABC Products">
+<img src="./client/public/images/abc-products-ecommerce-wireframe.png" height="40%" width="40%" alt="Wireframe for ABC Products">
 <br/><br/>
 
 
