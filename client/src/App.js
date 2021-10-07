@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Client Pages
-import homepage from './pages/homepage';
+import homepage from './pages/Home';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       {/* <Navigation /> */}
       
       <Switch>
-        <Route exact path="/" component={homepage} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
     </div>
