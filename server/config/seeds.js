@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Drinks' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books & Comics' },
-    { name: 'Cloths' }
+    { name: 'skincare(man)' },
+    { name: 'skincare(woman)' },
+    { name: 'skincare(children)' },
+    { name: 'skincare(infant)' },
+    { name: 'pet care' }
   ]);
 
   console.log('categories seeded');
@@ -23,7 +23,7 @@ db.once('open', async () => {
         '',
       image: '',
       category: categories[0]._id,
-      price: 1.99,
+      price: 2.00,
       quantity: 100
     },
     {
@@ -32,7 +32,7 @@ db.once('open', async () => {
         '',
       image: '',
       category: categories[0]._id,
-      price: 1.99,
+      price: 3.99,
       quantity: 200
     },
     {
@@ -41,8 +41,8 @@ db.once('open', async () => {
       description:
         '',
       image: '',
-      price: 4.99,
-      quantity: 30
+      price: 1.99,
+      quantity: 60
     },
     {
       name: '',
