@@ -18,120 +18,120 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: '',
+      name: 'Honey baby soap',
       description:
-        '',
-      image: '',
-      category: categories[0]._id,
-      price: 2.00,
+        'Soap made of milk and honey for soft skin',
+      image: 'baby1.jpg',
+      category: categories[3]._id,
+      price: 3.00,
       quantity: 100
     },
     {
-      name: '',
+      name: 'mild baby soap',
       description:
-        '',
-      image: '',
-      category: categories[0]._id,
-      price: 3.99,
+        'a lightly scented soap',
+      image: 'baby2.jpg',
+      category: categories[3]._id,
+      price: 1.50,
       quantity: 200
     },
     {
-      name: '',
-      category: categories[1]._id,
+      name: 'oatmilk soap',
+      category: categories[2]._id,
       description:
-        '',
-      image: '',
-      price: 1.99,
-      quantity: 60
+        'soap made out of oatmilk for eczema prone skin',
+      image: 'children1.jpg',
+      price: 3.99,
+      quantity: 100
     },
     {
-      name: '',
-      category: categories[1]._id,
+      name: 'Calendula flower soap',
+      category: categories[2]._id,
       description:
-        '',
-      image: '',
+        'Soap to maintain soft skin ',
+      image: 'children2.jpg',
       price: 2.00,
       quantity: 30
     },
     {
-      name: '',
+      name: 'aloe-vera soap',
+      category: categories[0]._id,
+      description:
+        'promote bright and healthy skin',
+      image: 'men1.jpg',
+      price: 2.50,
+      quantity: 100
+    },
+    {
+      name: 'shea butter soap',
+      category: categories[0]._id,
+      description:
+        'Promotes glowy skin',
+      image: 'men2.jpg',
+      price: 3.00,
+      quantity: 60
+    },
+    {
+      name: 'olive castile soap',
+      category: categories[0]._id,
+      description:
+        'a light fragrance free soap for very sensitive skin',
+      image: 'men3.jpg',
+      price: 4.50,
+      quantity: 60
+    },
+    {
+      name: 'turmeric soap',
       category: categories[1]._id,
       description:
-        '',
-      image: '',
+        'turmeric soap to fight blemishes',
+      image: 'women1.jpg',
+      price: 5.00,
+      quantity: 40
+    },
+    {
+      name: 'butterfly pea soap',
+      category: categories[1]._id,
+      description: 'soap gently exfoliates skin to reveal a healthy and softer skin ',
+      image: 'women2.jpg',
       price: 3.50,
-      quantity: 100
+      quantity: 90
     },
     {
-      name: '',
-      category: categories[2]._id,
+      name: 'lemon herbal soap',
+      category: categories[1]._id,
       description:
-        '',
-      image: '',
-      price: 399.99,
-      quantity: 45
+        'lemon essential oil and orange leaves soap ',
+      image: 'women3.jpg',
+      price: 2.99,
+      quantity: 60
     },
     {
-      name: '',
-      category: categories[2]._id,
+      name: 'pet liquid Shampoo',
+      category: categories[4]._id,
       description:
-        '',
-      image: '',
-      price: 1599.99,
-      quantity: 50
-    },
-    {
-      name: '',
-      category: categories[2]._id,
-      description:
-        '',
-      image: '',
-      price: 699.99,
-      quantity: 100
-    },
-    {
-      name: '',
-      category: categories[3]._id,
-      description: '',
-      image: '',
+        'made of sage and star anise to ward off bugs',
+      image: 'pet1,jpg',
       price: 1.99,
-      quantity: 100
+      quantity: 85
     },
     {
-      name: '',
-      category: categories[3]._id,
-      description:
-        '',
-      image: '',
-      price: 2.99,
-      quantity: 60
-    },
-    {
-      name: '',
-      category: categories[3]._id,
-      description:
-        '',
-      image: '',
-      price: 2.99,
-      quantity: 60
-    },
-    {
-      name: '',
+      name: 'dog shampoo bars',
       category: categories[4]._id,
       description:
-        '',
-      image: '',
-      price: 9.99,
-      quantity: 300
+        'made of coconut oil to keep coat shiny',
+      image: 'pet2.jpg',
+      price: 3.00,
+      quantity: 70
     },
     {
-      name: '',
+      name: 'spring flowers shampoo',
       category: categories[4]._id,
       description:
-        '',
-      image: '',
-      price: 9.99,
-      quantity: 300
+        'keeps your pet clean and freshly scented',
+      image: 'pet3.jpg',
+      price: 4.50,
+      quantity: 50
     }
   ]);
 
@@ -141,7 +141,7 @@ db.once('open', async () => {
 
   await User.create({
     firstName: 'Bruno',
-    lastName: 'Walderon',
+    lastName: 'Calderon',
     email: 'bce_moar_2000@gmail.com',
     password: 'bruno192000',
     orders: [
