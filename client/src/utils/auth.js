@@ -1,46 +1,45 @@
-// Reference 22-State > 23-Ins-Stripe
-import decode from "jwt-decode";
+import decode from 'jwt-decode';
 
 class AuthService {
-    getProfile() {
-        return decode(this.getToken());
-    }
+  getProfile() {
+    return decode(this.getToken());
+  }
 
-    loggedIn() {
-        // Check saved token and verify validity
-        const token = this.getToken();
-        return !!token && !this.isTokenExpired(token);
-    }
+  loggedIn() {
+    // Checks if there is a saved token and it's still valid
+    const token = this.getToken();
+    return !!token && !this.isTokenExpired(token);
+  }
 
-    isTokenExpired(token) {
-        try {
-            const decoded = decode(token);
-            if (decode.exp < Date.now() / 1000) {
-                return true;
-            } else return false;
-        } catch (err) {
-            return false;
-        }
+  isTokenExpired(token) {
+    try {
+      const decoded = decode(token);
+      if (decoded.exp < Date.now() / 1000) {
+        return true;
+      } else return false;
+    } catch (err) {
+      return false;
     }
+  }
 
-    getToken() {
-        // Get users token from localstorage
-        return localStorage.getItem('id_token');
-    }
+  getToken() {
+    // Retrieves the user token from localStorage
+    return localStorage.getItem('id_token');
+  }
 
-    login(idToken) {
-        // Saves profile data and token to localstorage
-        localStorage.setItem('id_token', idToken);
-        // State reset and page reload
-        window.location.assign('/');
-    }
+  login(idToken) {
+    // Saves user token to localStorage
+    localStorage.setItem('id_token', idToken);
 
-    logout() {
-        // Removes profile data and token from localstorage
-        localStorage.removeItem('id_token');
-        // State reset and page reload
-        window.location.assign('/');
-    }
+    window.location.assign('/');
+  }
+
+  logout() {
+    // Clear user token and profile data from localStorage
+    localStorage.removeItem('id_token');
+    // this will reload the page and reset the state of the application
+    window.location.assign('/');
+  }
 }
 
 export default new AuthService();

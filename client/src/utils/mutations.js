@@ -1,5 +1,5 @@
 // Reference 22-State > 23-Ins-Stripe
-import { gql } from '@apollo/client';
+import { gql } from 'graphql-tag';
 
 export const LOGIN = gql`
     mutation login($email: String!, $password: String!) {
