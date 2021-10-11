@@ -1,7 +1,8 @@
 // Reference 22-State > 23-Ins-Stripe
-import React from 'react';
-import './App.css';
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 
 // Client Pages
 import Home from './pages/Home';
@@ -36,6 +37,7 @@ const authLink = setContext((_, { headers }) => {
 const client = new ApolloClient({
   // link: authLink.concat(httpLink),
   // cache: new InMemoryCache(),
+
   request: (operation) => {
     const token = localStorage.getItem('id_token')
     operation.setContext({
@@ -66,6 +68,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+
   );
 }
 
