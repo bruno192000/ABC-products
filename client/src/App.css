@@ -206,3 +206,15 @@ input:focus {
   margin-bottom: var(--spacing-one);
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.my-2 {
+  margin-top: var(--spacing-two);
+  margin-bottom: var(--spacing-two);
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
