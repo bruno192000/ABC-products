@@ -24,10 +24,37 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Welcome to ABC Product E-Commerce Store</title>
+    <script src="go.js"></script>
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+    <script>function init() {
+      var $ = go.GraphObject.make;
+
+      var myDiagram = 
+        $(go.Diagram, "myDiagramDiv",
+        {
+          "undoManager.isEnabled": true
+        });
+
+      myDiagram.model = new go.Model(
+        [
+          { key: "Alpha" },
+          { key: "Beta" },
+          { key: "Gamma" }
+        ]
+      );
+    }
+
+    </script>
   </head>
-  <body>
+  <body onload="init()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- 
+      <div 
+        id="myDiagramDiv" 
+        style="width:300px; height:300px;border:1px solid black;">
+      </div> 
+    -->
     <div id="root"></div>
     <!--
       This HTML file is a template.

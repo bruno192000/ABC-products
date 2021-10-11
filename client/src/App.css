@@ -1,3 +1,4 @@
+/* Style from Template Create React Installation */
 .App {
   text-align: center;
 }
@@ -37,7 +38,7 @@
   }
 }
 
-/* Nav - Reference 22-State > 23-Ins-Stripe */
+/* Style for Nav.js - Reference 22-State > 23-Ins-Stripe */
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
@@ -174,6 +175,8 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
+/* Style for Home.js */
+
 .container {
   width: 85%;
   max-width: 1200px;
@@ -196,4 +199,10 @@ input:focus {
   padding-left: var(--spacing-one);
 }
 
+/* Style for Signup.js */
+
+.my-1 {
+  margin-top: var(--spacing-one);
+  margin-bottom: var(--spacing-one);
+}
 
