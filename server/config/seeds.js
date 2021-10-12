@@ -111,7 +111,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'made of sage and star anise to ward off bugs',
-      image: 'pet1,jpg',
+      image: 'pet1.jpg',
       price: 1.99,
       quantity: 85
     },
