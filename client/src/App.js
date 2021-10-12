@@ -12,10 +12,7 @@ import Signup from './pages/Signup';
 // import Login from './pages/Login';
 
 // ApolloClient Info
-import { InMemoryCache, createHttpLink } from '@apollo/client';
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
-
+// import { InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // import { StoreProvider } from './utils/GlobalState';
 import { Provider } from 'react-redux';
