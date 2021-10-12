@@ -1,40 +1,21 @@
-// Reference 22-State > 23-Ins-Stripe
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
-// Client Pages
-import Home from './pages/Home';
-import Nav from './components/Nav';
-import NoMatch from './pages/NoMatch';
-import Signup from './pages/Signup';
-// import Login from './pages/Login';
-
-// ApolloClient Info
-// import { InMemoryCache, createHttpLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-// import { StoreProvider } from './utils/GlobalState';
 import { Provider } from 'react-redux';
+import store from './utils/store';
 
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
-  };
-});
-
-// const httpLink = createHttpLink({
-//   uri: '/graphql',
-// });
+import Home from "./pages/Home";
+import Detail from "./pages/Detail.js";
+import NoMatch from "./pages/NoMatch";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Nav from "./components/Nav";
+import Success from "./pages/Success";
+import OrderHistory from "./pages/OrderHistory";
 
 const client = new ApolloClient({
-  // link: authLink.concat(httpLink),
-  // cache: new InMemoryCache(),
-
   request: (operation) => {
     const token = localStorage.getItem('id_token')
     operation.setContext({
@@ -44,24 +25,25 @@ const client = new ApolloClient({
     })
   },
   uri: '/graphql',
-});
+})
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="App">
-          {/* <StoreProvider> */}
-          <Provider>
+        <div>
+          <Provider store={store}>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
-              {/* <Route exact path="/login" component={Login}/> */}
-              <Route exact path="/signup" component={Signup}/>
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/success" component={Success} />
+              <Route exact path="/orderHistory" component={OrderHistory} />
+              <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
           </Provider>
-          {/* </StoreProvider> */}
         </div>
       </Router>
     </ApolloProvider>
