@@ -1,12 +1,12 @@
 :root {
-  --primary: #104c96;
-  --secondary: #0af3e7;
-  --tertiary: #382e2c;
+  --primary: linear-gradient(45deg, lightblue, #104c96);
+  --secondary: #82cadbb4;
+  --tertiary: #aa776d;
   --light: #fafafa;
   --dark: #272f32;
-  --error: rgb(65, 212, 72);
-  --spacing-one: 10px;
-  --spacing-two: 20px;
+  --error: rgba(143, 31, 31, 0.705);
+  --spacing-one: 20px;
+  --spacing-two: 40px;
 }
 
 * {
