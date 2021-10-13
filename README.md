@@ -1,7 +1,7 @@
 # 🏬 ABC Products
 
 ABC Products is an E-Commerce single page web application that enables customers to buy a variety of products online and shipped anywhere in the continental United States.
-<br/><br/>
+<img src="assets/Screenshot (24).png" alt="failed to load">
 
 ## 💻 Developers
 
@@ -39,4 +39,5 @@ search for products           | see what items are available
 <br/><br/>
 
 
-## Contact Us
+## App link
+
